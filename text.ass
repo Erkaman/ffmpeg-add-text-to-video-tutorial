@@ -1,0 +1,29 @@
+[Script Info]
+ScriptType: v4.00
+Collisions: Normal
+; screen resolution, of the author of this file.
+PlayResX: 1920
+PlayResY: 1080
+PlayDepth: 0
+; play at 100% speed.
+Timer: 100,0000
+
+; For further info on all these fields, refer to the document
+; "Sub Station Alpha v4.00+ Script Format"
+
+[V4 Styles]
+; this line is actually ignored by the parser, but I include it for improving readability.
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, TertiaryColour, BackColour, Bold, Italic, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, AlphaLevel, Encoding
+; 153 specifies the red RGB color 0x000099. Note that the order is 0xBBGGRR.
+; and note that 153 is the value of 0x000099, in base 10.
+; 6 specifies the alignment of the text.
+; for centered alignment, we specify 2. To then move it to the top, we add 4.
+; so we end up with 2 + 4 = 6
+Style: Default,Arial,90,153,153,153,153,0,0,0,0,0,6,30,30,30,0,0
+
+[Events]
+Format: Marked, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+; show "Zoom Out", in Default Style
+Dialogue: Marked=0,0:00:00.00,0:00:01.70,Default,,0000,0000,0000,,Zoom Out
+; show "Zoom In", in Default Style 
+Dialogue: Marked=0,0:00:01.70,0:00:04.00,Default,,0000,0000,0000,,Zoom In
